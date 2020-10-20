@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "types": ["jest", "node"],
+    "esModuleInterop": true,
+    "lib": ["ES2015", "DOM"],
+    "declaration": true,
+    "declarationMap": true,
+    "target": "ES5",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "~*": [".*"]
+    }
+  }
+}
