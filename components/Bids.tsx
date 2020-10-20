@@ -1,3 +1,4 @@
+import { CircularProgress } from '@material-ui/core'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import { pick } from 'lodash'
@@ -30,7 +31,19 @@ function Bids(props: BidsProps) {
     <Paper elevation={15} style={{ margin: 100, padding: 60 }}>
       <Typography variant="h4">Existing bids:</Typography>
 
-      {loading && <div>Loading</div>}
+      {loading && (
+        <div
+          style={{
+            width: '100%',
+            height: 300,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <CircularProgress />
+        </div>
+      )}
 
       {!loading && <BidsList bids={bids} />}
 
